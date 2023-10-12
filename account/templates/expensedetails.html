@@ -1,0 +1,27 @@
+{%extends 'master.html' %}
+{%block 'main'%}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>SrNo</th>
+            <th scope="col">Expense Amount</th>
+            <th scope="col">Expense date</th>
+            <th scope="col">Expense type</th>
+            <th scope="col">Expense Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%for i in data%}
+        <tr>
+            <th>{{i.id}}</th>
+            <td>{{i.expense_amount}}</td>
+            <td>{{i.expense_date}}</td>
+            <td>{{i.expense_type}}</td>
+            <td>{{i.expense_description}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+{%endblock%}

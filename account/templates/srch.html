@@ -1,0 +1,39 @@
+{%extends 'master.html' %}
+{%block 'main'%}
+<h1>search</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>SrNo</th>
+            <th scope="col">Amount</th>
+            <th scope="col">date</th>
+            <th scope="col">type</th>
+            <th scope="col">Description</th>
+           <th scope="col">Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%for i in data1%}
+        <tr>
+            <th scope="row">{{i.id}}</th>
+            <td>{{i.income_amount}}</td>
+            <td>{{i.income_date}}</td>
+            <td>{{i.income_type}}</td>
+            <td>{{i.income_description}}</td>
+            <td>Income</td>
+        </tr>
+        {%endfor%}
+        {%for i in data2%}
+        <tr>
+            <th scope="row">{{i.id}}</th>
+            <td>{{i.expense_amount}}</td>
+            <td>{{i.expense_date}}</td>
+            <td>{{i.expense_type}}</td>
+            <td>{{i.expense_description}}</td>
+            <td>Expense</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+{%endblock%}
